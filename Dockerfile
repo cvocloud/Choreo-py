@@ -10,7 +10,7 @@ COPY app.py start.sh /home/choreouser/
 EXPOSE 3000
 
 # 安装应用程序的依赖
-RUN pip install
+
 
 # 设置默认的命令，即启动应用程序
 CMD ["python", "app.py"]
