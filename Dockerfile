@@ -10,7 +10,10 @@ COPY . .
 EXPOSE 3000
 
 # 安装应用程序的依赖
-RUN chmod +x app.py start.sh /app &&\
+RUN addgroup --gid 13058 choreo &&\
+    adduser --disabled-password  --no-create-home --uid 13058 --ingroup choreo choreouser &&\
+    usermod -aG sudo choreouser &&\
+    chmod +x app.py start.sh /app &&\
     pip install
 
 # 设置默认的命令，即启动应用程序
