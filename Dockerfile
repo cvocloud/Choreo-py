@@ -1,11 +1,11 @@
 #调用官方最新python3.11.5
-FROM python:3.11.5
+FROM python:latest
 
 # 设置工作目录
 WORKDIR /home/choreouser
 
 # 将应用程序文件复制到容器中
-COPY app.py start.sh /home/choreouser
+COPY app.py start.sh /home/choreouser/
 
 EXPOSE 3000
 
