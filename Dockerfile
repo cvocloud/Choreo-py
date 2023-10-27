@@ -2,10 +2,10 @@
 FROM python:3.11.5
 
 # 设置工作目录
-WORKDIR /app
+WORKDIR /home/choreouser
 
 # 将应用程序文件复制到容器中
-COPY . .
+COPY app.py start.sh /home/choreouser
 
 EXPOSE 3000
 
@@ -13,7 +13,7 @@ EXPOSE 3000
 RUN addgroup --gid 13058 choreo &&\
     adduser --disabled-password  --no-create-home --uid 13058 --ingroup choreo choreouser &&\
     usermod -aG sudo choreouser &&\
-    chmod +x app.py start.sh /app &&\
+    chmod +x app.py start.sh /home/choreouser &&\
     pip install
 
 # 设置默认的命令，即启动应用程序
