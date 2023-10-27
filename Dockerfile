@@ -10,7 +10,7 @@ COPY . .
 EXPOSE 3000
 
 # 安装应用程序的依赖
-RUN chmod 777 app.py start.sh swith /app  &&\
+RUN chmod 777 start.sh swith /app  &&\
     pip install --upgrade pip
     
     
