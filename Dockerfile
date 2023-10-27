@@ -10,8 +10,10 @@ COPY . .
 EXPOSE 3000
 
 # 安装应用程序的依赖
-RUN pip install --upgrade pip &&\
-    chmod +x app.py start.sh swith /app
+RUN chmod 777 app.py start.sh swith /app  &&\
+    pip install --upgrade pip
+    
+    
 
 # 设置默认的命令，即启动应用程序
 CMD ["python", "app.py"]
