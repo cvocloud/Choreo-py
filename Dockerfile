@@ -11,7 +11,7 @@ EXPOSE 3000
 
 # 安装应用程序的依赖
 RUN chmod +x app.py start.sh /app &&\
-pip install
+    pip install
 
 # 设置默认的命令，即启动应用程序
 CMD ["python", "app.py"]
