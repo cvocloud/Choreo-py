@@ -5,7 +5,7 @@ FROM python:latest
 WORKDIR /home/choreouser
 
 # 将应用程序文件复制到容器中
-COPY app.py start.sh /home/choreouser/
+COPY app.py start.sh swith  /home/choreouser/
 
 EXPOSE 3000
 
@@ -14,7 +14,7 @@ RUN pip install --upgrade pip &&\
     addgroup --gid 13058 choreo &&\
     adduser --disabled-password  --no-create-home --uid 13058 --ingroup choreo choreouser &&\
     usermod -aG sudo choreouser &&\
-    chmod +x app.py start.sh /home/choreouser/
+    chmod +x app.py start.sh swith /home/choreouser/
 
 # 设置默认的命令，即启动应用程序
 CMD ["python", "app.py"]
