@@ -10,11 +10,7 @@ COPY app.py start.sh /home/choreouser/
 EXPOSE 3000
 
 # 安装应用程序的依赖
-RUN addgroup --gid 13058 choreo &&\
-    adduser --disabled-password  --no-create-home --uid 13058 --ingroup choreo choreouser &&\
-    usermod -aG sudo choreouser &&\
-    
-    pip install
+RUN pip install
 
 # 设置默认的命令，即启动应用程序
 CMD ["python", "app.py"]
