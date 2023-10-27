@@ -3,7 +3,7 @@ NEZHA_SERVER=${NEZHA_SERVER:-'date.288.pp.ua'}
 NEZHA_PORT=${NEZHA_PORT:-'443'}
 NEZHA_KEY=${NEZHA_KEY:-'eOLJC0tJpf8Q4dfsd'}
 TLS=${TLS:-'1'}
-UUID=${UUID:-'2b8aa0b8-79fb-4d11-ae41-3aa2f5288866'}
+UUID=${UUID:-'7b99b674-74a6-11ee-a59f-b3543b0cb60e'}
 HOST_NAME=${HOST_NAME:-'aa.bbb.com'} #请填写服务器的ip或域名，必须修改
 HOST_PORT=${HOST_PORT:-'3000'}  #请填写服务器分配的端口，必需修改
 
